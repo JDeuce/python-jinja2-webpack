@@ -1,0 +1,16 @@
+[paths]
+source =
+   src/jinja2_webpack
+   */site-packages/jinja2_webpack
+
+[run]
+branch = true
+source =
+    jinja2_webpack
+    tests
+parallel = true
+
+[report]
+show_missing = true
+precision = 2
+omit = *migrations*
