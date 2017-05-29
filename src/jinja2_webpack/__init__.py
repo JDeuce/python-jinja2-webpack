@@ -25,4 +25,4 @@ def load_webpack_manifest(settings):
     return resolve_manifest(settings, manifest)
 
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
