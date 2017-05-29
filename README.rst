@@ -16,8 +16,8 @@ Overview
       - | |version| |wheel| |supported-versions| |supported-implementations|
         | |commits-since|
 
-.. |docs| image:: https://readthedocs.org/projects/python-jinja2-webpack/badge/?style=flat&version=latest
-    :target: https://readthedocs.org/projects/python-jinja2-webpack?badge=latest
+.. |docs| image:: https://readthedocs.org/projects/python-jinja2-webpack/badge?style=flat&version=latest
+    :target: https://readthedocs.org/projects/python-jinja2-webpack/?badge=latest
     :alt: Documentation Status
 
 .. |travis| image:: https://travis-ci.org/JDeuce/python-jinja2-webpack.svg?branch=master
@@ -32,9 +32,10 @@ Overview
     :alt: Requirements Status
     :target: https://requires.io/github/JDeuce/python-jinja2-webpack/requirements/?branch=master
 
+
 .. |coveralls| image:: https://coveralls.io/repos/JDeuce/python-jinja2-webpack/badge.svg?branch=master&service=github
     :alt: Coverage Status
-    :target: https://coveralls.io/r/JDeuce/python-jinja2-webpack
+    :target: https://coveralls.io/github/JDeuce/python-jinja2-webpack
 
 .. |codecov| image:: https://codecov.io/github/JDeuce/python-jinja2-webpack/coverage.svg?branch=master
     :alt: Coverage Status
