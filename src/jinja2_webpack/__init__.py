@@ -25,4 +25,4 @@ def load_webpack_manifest(settings):
 
 
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
