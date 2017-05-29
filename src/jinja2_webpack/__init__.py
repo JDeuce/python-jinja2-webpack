@@ -5,6 +5,7 @@ DEFAULT_SETTINGS = {
     'manifest': 'webpack-manifest.json',
 }
 
+
 def get_webpack_resolver(settings):
     root = settings['publicRoot']
     return lambda asset: '%s/%s' % (root, asset)
@@ -22,7 +23,6 @@ def load_webpack_manifest(settings):
     with open(settings['manifest']) as f:
         manifest = json.loads(f.read())
     return resolve_manifest(settings, manifest)
-
 
 
 __version__ = "0.1.1"

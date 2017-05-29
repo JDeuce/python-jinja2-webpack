@@ -1,9 +1,10 @@
-from . import DEFAULT_SETTINGS, load_webpack_manifest
+from . import DEFAULT_SETTINGS
+from . import load_webpack_manifest
 from .filter import WebpackFilter
 
 
 def webpack_settings_from_settings(registry_settings):
-    prefixes = [ 'webpack.' ]
+    prefixes = ['webpack.']
     settings = DEFAULT_SETTINGS.copy()
     for k, v in registry_settings.items():
         for prefix in prefixes:
@@ -28,5 +29,6 @@ def includeme(config):
     wpf = WebpackFilter(manifest)
     jinja2_env = config.get_jinja2_environment()
     if jinja2_env is None:
-        raise Exception('Unable to find jinja2 environment. Try config.commit()')
+        raise Exception('Unable to find jinja2 environment. '
+                        'Try config.commit()')
     jinja2_env.filters['webpack'] = wpf

@@ -1,5 +1,6 @@
 from os import path
 
+
 class WebpackFilter(object):
     def __init__(self, manifest):
         self.manifest = manifest
