@@ -16,8 +16,8 @@ Overview
       - | |version| |wheel| |supported-versions| |supported-implementations|
         | |commits-since|
 
-.. |docs| image:: https://readthedocs.org/projects/python-jinja2-webpack/badge/?style=flat
-    :target: https://readthedocs.org/projects/python-jinja2-webpack
+.. |docs| image:: https://readthedocs.org/projects/python-jinja2-webpack/badge/?style=flat&version=latest
+    :target: https://readthedocs.org/projects/python-jinja2-webpack?badge=latest
     :alt: Documentation Status
 
 .. |travis| image:: https://travis-ci.org/JDeuce/python-jinja2-webpack.svg?branch=master
