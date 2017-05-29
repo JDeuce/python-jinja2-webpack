@@ -75,7 +75,7 @@ Example usage::
     jinja2-webpack-scan -o webpack-asset-entries.js \
         -d 'templates/' \
         --root 'project/' \
-        'templates/\*.jinja2'
+        'templates/*.jinja2'
 
 
 
