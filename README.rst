@@ -20,31 +20,31 @@ Overview
     :target: https://readthedocs.org/projects/python-jinja2-webpack
     :alt: Documentation Status
 
-.. |travis| image:: https://travis-ci.org/jdeuce/python-jinja2-webpack.svg?branch=master
+.. |travis| image:: https://travis-ci.org/JDeuce/python-jinja2-webpack.svg?branch=master
     :alt: Travis-CI Build Status
-    :target: https://travis-ci.org/jdeuce/python-jinja2-webpack
+    :target: https://travis-ci.org/JDeuce/python-jinja2-webpack
 
-.. |appveyor| image:: https://ci.appveyor.com/api/projects/status/github/jdeuce/python-jinja2-webpack?branch=master&svg=true
+.. |appveyor| image:: https://ci.appveyor.com/api/projects/status/github/JDeuce/python-jinja2-webpack?branch=master&svg=true
     :alt: AppVeyor Build Status
-    :target: https://ci.appveyor.com/project/jdeuce/python-jinja2-webpack
+    :target: https://ci.appveyor.com/project/JDeuce/python-jinja2-webpack
 
-.. |requires| image:: https://requires.io/github/jdeuce/python-jinja2-webpack/requirements.svg?branch=master
+.. |requires| image:: https://requires.io/github/JDeuce/python-jinja2-webpack/requirements.svg?branch=master
     :alt: Requirements Status
-    :target: https://requires.io/github/jdeuce/python-jinja2-webpack/requirements/?branch=master
+    :target: https://requires.io/github/JDeuce/python-jinja2-webpack/requirements/?branch=master
 
-.. |coveralls| image:: https://coveralls.io/repos/jdeuce/python-jinja2-webpack/badge.svg?branch=master&service=github
+.. |coveralls| image:: https://coveralls.io/repos/JDeuce/python-jinja2-webpack/badge.svg?branch=master&service=github
     :alt: Coverage Status
-    :target: https://coveralls.io/r/jdeuce/python-jinja2-webpack
+    :target: https://coveralls.io/r/JDeuce/python-jinja2-webpack
 
-.. |codecov| image:: https://codecov.io/github/jdeuce/python-jinja2-webpack/coverage.svg?branch=master
+.. |codecov| image:: https://codecov.io/github/JDeuce/python-jinja2-webpack/coverage.svg?branch=master
     :alt: Coverage Status
-    :target: https://codecov.io/github/jdeuce/python-jinja2-webpack
+    :target: https://codecov.io/github/JDeuce/python-jinja2-webpack
 
 .. |version| image:: https://img.shields.io/pypi/v/jinja2-webpack.svg
     :alt: PyPI Package latest release
     :target: https://pypi.python.org/pypi/jinja2-webpack
 
-.. |commits-since| image:: https://img.shields.io/github/commits-since/jdeuce/python-jinja2-webpack/v0.1.0.svg
+.. |commits-since| image:: https://img.shields.io/github/commits-since/JDeuce/python-jinja2-webpack/v0.1.0.svg
     :alt: Commits since latest release
     :target: https://github.com/JDeuce/python-jinja2-webpack/compare/v0.1.0...master
 

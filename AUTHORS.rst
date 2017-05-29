@@ -2,4 +2,4 @@
 Authors
 =======
 
-* Josh Jaques - https://jdeuce.net
+* Josh Jaques - https://JDeuce.net
