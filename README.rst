@@ -46,7 +46,7 @@ Overview
 
 .. |commits-since| image:: https://img.shields.io/github/commits-since/jdeuce/python-jinja2-webpack/v0.1.0.svg
     :alt: Commits since latest release
-    :target: https://github.com/jdeuce/python-jinja2-webpack/compare/v0.1.0...master
+    :target: https://github.com/JDeuce/python-jinja2-webpack/compare/v0.1.0...master
 
 .. |wheel| image:: https://img.shields.io/pypi/wheel/jinja2-webpack.svg
     :alt: PyPI Wheel

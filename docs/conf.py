@@ -31,8 +31,8 @@ version = release = u'0.1.0'
 pygments_style = 'trac'
 templates_path = ['.']
 extlinks = {
-    'issue': ('https://github.com/jdeuce/python-jinja2-webpack/issues/%s', '#'),
-    'pr': ('https://github.com/jdeuce/python-jinja2-webpack/pull/%s', 'PR #'),
+    'issue': ('https://github.com/JDeuce/python-jinja2-webpack/issues/%s', '#'),
+    'pr': ('https://github.com/JDeuce/python-jinja2-webpack/pull/%s', 'PR #'),
 }
 # on_rtd is whether we are on readthedocs.org
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'

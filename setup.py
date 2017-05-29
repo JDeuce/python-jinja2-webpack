@@ -33,7 +33,7 @@ setup(
     ),
     author='Josh Jaques',
     author_email='jdeuce@jdeuce.net',
-    url='https://github.com/jdeuce/python-jinja2-webpack',
+    url='https://github.com/JDeuce/python-jinja2-webpack',
     packages=find_packages('src'),
     package_dir={'': 'src'},
     py_modules=[splitext(basename(path))[0] for path in glob('src/*.py')],
