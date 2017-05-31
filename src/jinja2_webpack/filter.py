@@ -1,13 +1,8 @@
-from os import path
-
-
 class WebpackFilter(object):
-    def __init__(self, manifest):
-        self.manifest = manifest
+    def __init__(self, environment):
+        self.environment = environment
 
-    def update_manifest(self, manifest):
-        self.manifest = manifest
-
-    def __call__(self, value):
-        basename = path.basename(value)
-        return self.manifest.get(basename, '')
+    def __call__(self, assetspec):
+        asset = self.environment.identify_assetspec(assetspec)
+        if asset:
+            return self.environment.render_asset(asset)
