@@ -45,9 +45,9 @@ Overview
     :alt: PyPI Package latest release
     :target: https://pypi.python.org/pypi/jinja2-webpack
 
-.. |commits-since| image:: https://img.shields.io/github/commits-since/JDeuce/python-jinja2-webpack/v0.1.2.svg
+.. |commits-since| image:: https://img.shields.io/github/commits-since/JDeuce/python-jinja2-webpack/v0.1.3.svg
     :alt: Commits since latest release
-    :target: https://github.com/JDeuce/python-jinja2-webpack/compare/v0.1.2...master
+    :target: https://github.com/JDeuce/python-jinja2-webpack/compare/v0.1.3...master
 
 .. |wheel| image:: https://img.shields.io/pypi/wheel/jinja2-webpack.svg
     :alt: PyPI Wheel

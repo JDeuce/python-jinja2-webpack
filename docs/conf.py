@@ -26,7 +26,7 @@ project = u'jinja2-webpack'
 year = '2017'
 author = u'Josh Jaques'
 copyright = '{0}, {1}'.format(year, author)
-version = release = u'0.1.2'
+version = release = u'0.1.3'
 
 pygments_style = 'trac'
 templates_path = ['.']
