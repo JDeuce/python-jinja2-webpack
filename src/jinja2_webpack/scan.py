@@ -23,7 +23,12 @@ class WebpackReferenceFinder(NodeVisitor):
     def visit_Filter(self, node, *args, **kwargs):
         if node.name != self.filter_name:
             return
-        spec = node.node.value
+        try:
+            spec = node.node.value
+        except AttributeError:
+            logging.info('Skipping reference to %r because it is not a string',
+                         node)
+            return
 
         if spec.startswith('.'):
             # set relative imports relative to reference root

@@ -53,6 +53,12 @@ def test_scan_invalid_throws_exception():
             templates=['invalid/*.jinja2'])
 
 
+def test_variable_to_filter():
+    _scan(
+        directories=['variable'],
+        templates=['variable/*.jinja2'])
+
+
 def test_build_output():
     assets = _scan(
         directories=['templates*'],
