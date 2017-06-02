@@ -65,7 +65,7 @@ setup(
         # eg: 'keyword1', 'keyword2', 'keyword3',
     ],
     install_requires=[
-        'jinja2'
+        'Jinja2'
     ],
     extras_require={
         # eg:
