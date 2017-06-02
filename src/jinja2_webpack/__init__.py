@@ -15,7 +15,7 @@ DEFAULT_SETTINGS = {
         '.jpeg': renderer.image,
         '.jpg': renderer.image,
         '.gif': renderer.image,
-        '.css': renderer.stylesheet
+        '.css': renderer.stylesheet,
     }
 }
 
