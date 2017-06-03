@@ -2,15 +2,10 @@
 Usage
 =====
 
-To use jinja2-webpack in a project::
+You will configure webpack to write a JSON manifest of built files with webpack-manifest-plugin.
 
-	import jinja2_webpack
-
-
-=============================
-Referencing asset from jinja2
-=============================
-You can get an asset reference by using the filter syntax::
+This project can then be configured to load the manifest, and allow you to reference the templates
+from your jinja2 templates by using the filter syntax::
 
     {{ "entry_name" | webpack }}
 
@@ -45,21 +40,27 @@ Auto-scanning jinja2 templates for entries
 ==========================================
 
 
-This project comes with the jinja2-webpack-scan command line
-tool which can be used to generate a JS file that can be used
-to force webpack to build entries you reference in your jinja2 templates.
+It is also possible to scan your jinja2 templates to force
+webpack to process assets that you reference from them.
 
+This would enable you to reference static pngs from within your jinja2
+templates.
+
+The project comes with a command line tool called jinja2-webpack-scan
+which can be used to generate a JS file that requires() all of the
+assets you reference from your jinja2 templates. This will cause webpack
+to process them and add them to the manifest.
 
 Example running it on a template with::
 
-    {{ "entry_name" | webpack }}
+    {{ "./image.png" | webpack }}
 
 Would produce a JS reference file with a line like::
 
-    require("entry_name")
+    require("./image.png");
 
 And it takes the path of the entry into account, so you can
-do relative imports such as::
+do relative imports within your templates such as::
 
     {{ "../pngs/image.png" | webpack }}
 
@@ -72,7 +73,8 @@ output file::
 
 Example usage::
 
-    jinja2-webpack-scan -o webpack-asset-entries.js \
+    jinja2-webpack-scan \
+        -o webpack-asset-entries.js \
         -d 'templates/' \
         --root 'project/' \
         'templates/*.jinja2'
