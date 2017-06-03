@@ -14,7 +14,8 @@ logging.basicConfig(level=logging.DEBUG)
 
 
 def _normpath(paths):
-    # On Windows, convert forward slashes to backward slashes.
+    # On Windows, convert forward slashes to backward slashes,
+    # so we will reference the command line the proper way for the OS.
     return [os.path.normpath(path) for path in paths]
 
 
@@ -48,7 +49,7 @@ def test_scan_relative():
     assets = _scan(
         directories=['templates*'],
         templates=['template*/*.jinja2'])
-    assert 'templates2/test.png' in assets
+    assert os.path.join('templates2', 'test.png') in assets
 
 
 def test_scan_invalid_throws_exception():
