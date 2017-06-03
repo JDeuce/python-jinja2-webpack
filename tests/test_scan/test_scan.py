@@ -13,14 +13,20 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 logging.basicConfig(level=logging.DEBUG)
 
 
+def _normpath(paths):
+    # On Windows, convert forward slashes to backward slashes.
+    return [os.path.normpath(path) for path in paths]
+
+
 def _scan(directories, templates):
-    directories = [os.path.join(HERE, d) for d in directories]
-    templates = [os.path.join(HERE, t) for t in templates]
+    directories = _normpath(directories)
+    templates = _normpath(templates)
     return scan(
         reference_root=HERE,
         root=HERE,
         directories=directories,
         templates=templates)
+
 
 def test_scan_single():
     assets = _scan(
@@ -28,7 +34,6 @@ def test_scan_single():
         templates=['templates1/*.jinja2'])
 
     assert assets == ['test1']
-
 
 
 def test_scan_multiple():
@@ -86,7 +91,7 @@ def test_main_file():
             '--root', HERE,
             '--directories', os.path.join(HERE, 'templates*'),
             '--outfile', name,
-            'template*/*.jinja2'
+            os.path.join('template*', '*.jinja2')
         ])
 
         with open(name) as fp:
@@ -106,7 +111,7 @@ def test_main_stdout(capsys):
             '--root', HERE,
             '--directories', os.path.join(HERE, 'templates*'),
             '--',
-            'template*/*.jinja2'
+            os.path.join('template*', '*.jinja2')
         ])
 
         data, _ = capsys.readouterr()
@@ -127,7 +132,7 @@ def test_main_reference():
             '--reference-root', os.path.join(HERE, '..'),
             '--directories', os.path.join(HERE, 'templates*'),
             '--outfile', name,
-            'template*/*.jinja2'
+            os.path.join('template*', '*.jinja2')
         ])
 
         with open(name) as fp:
