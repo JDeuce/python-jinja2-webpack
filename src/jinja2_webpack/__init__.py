@@ -8,7 +8,7 @@ DEFAULT_SETTINGS = {
     'publicRoot': '/static/pack',
     'manifest': 'webpack-manifest.json',
     'defaultRenderer': renderer.url,
-    'useDefaultRenderByExt': False, # this setting is mostly experimental
+    'useDefaultRenderByExt': False,  # this setting is mostly experimental
     'renderByExt': {
         '.js': renderer.script,
         '.png': renderer.image,
