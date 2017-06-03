@@ -16,11 +16,11 @@ Overview
       - | |version| |wheel| |supported-versions| |supported-implementations|
         | |commits-since|
 
-.. |docs| image:: https://readthedocs.org/projects/python-jinja2-webpack/badge?version=latest
-    :target: http://python-jinja2-webpack.readthedocs.io/en/latest/?badge=latest
+.. |docs| image:: https://readthedocs.org/projects/jinja2-webpack/badge?version=latest
+    :target: http://jinja2-webpack.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
 
-.. |travis| image:: https://travis-ci.org/JDeuce/python-jinja2-webpack.svg?branch=master
+.. |travis| image:: https://travis-ci.org/JDeuce/jinja2-webpack.svg?branch=master
     :alt: Travis-CI Build Status
     :target: https://travis-ci.org/JDeuce/python-jinja2-webpack
 
@@ -78,7 +78,7 @@ Installation
 Documentation
 =============
 
-https://python-jinja2-webpack.readthedocs.io/
+https://jinja2-webpack.readthedocs.io/
 
 Development
 ===========
