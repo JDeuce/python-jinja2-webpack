@@ -1,7 +1,7 @@
 import os
 import tempfile
 
-from jinja2_webpack.utils.load_json import load_json
+from jinja2_webpack.utils import load_json
 
 
 def test_load_dict():

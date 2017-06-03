@@ -11,6 +11,8 @@ import sys
 from jinja2 import Environment, FileSystemLoader
 from jinja2.visitor import NodeVisitor
 
+from .utils import normalize_path
+
 
 class WebpackReferenceFinder(NodeVisitor):
     def __init__(self, reference_root, filter_name=None):
@@ -67,9 +69,7 @@ def find_resources(root, reference_root, env, template_globs):
     finder = WebpackReferenceFinder(reference_root)
     for template in templates:
         finder.directory = os.path.join(root, os.path.dirname(template))
-        # jinja2 assumes all templates are referenced with /
-        # despite the underlying OS, see jinja2.loaders.split_template_path
-        finder.template = '/'.join(os.path.split(template))
+        finder.template = template = normalize_path(template)
         logging.info('Processing %s in directory %s',
                      template, finder.directory)
         template_source = env.loader.get_source(env, template)[0]
@@ -85,8 +85,7 @@ def find_resources(root, reference_root, env, template_globs):
 def build_output(reference_root, assets, outfile):
     logging.debug('Using reference root %s', reference_root)
     print('// root: ', os.path.abspath(reference_root), file=outfile)
-    for asset in assets:
-        path = './%s' % asset
+    for path in assets:
         # we only need to include paths to static assets in the
         # generated file, entry points are already in webpack and
         # won't exist as files on disk
@@ -96,7 +95,8 @@ def build_output(reference_root, assets, outfile):
                      exists and 'require' or 'skip')
 
         if exists:
-            print('require("%s");' % path, file=outfile)
+            path = normalize_path(path)
+            print('require("./%s");' % path, file=outfile)
 
 
 def scan(reference_root, root, directories, templates):

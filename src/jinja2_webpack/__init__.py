@@ -1,7 +1,7 @@
 from os import path
 
 from . import renderer
-from .utils.load_json import load_json
+from .utils import load_json
 
 DEFAULT_SETTINGS = {
     'errorOnInvalidReference': True,
