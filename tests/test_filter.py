@@ -24,7 +24,7 @@ def test_basename_lookup():
 def test_invalid_empty():
     env = Environment(manifest=None, errorOnInvalidReference=False)
     f = WebpackFilter(env)
-    assert f('a') == None
+    assert f('a') is None
 
 
 def test_invalid_error():

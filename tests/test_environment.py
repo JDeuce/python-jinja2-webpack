@@ -3,8 +3,9 @@ import pytest
 from jinja2_webpack import AssetNotFoundException, Environment
 
 
-@pytest.fixture(scope="module")
+@pytest.fixture(scope='module')
 def env():
+
     e = Environment(
         publicRoot='/pack',
         manifest={
@@ -45,7 +46,7 @@ def test_renderer(env):
     assert env.render_asset(a) == '/pack/b'
 
 
-@pytest.fixture(scope="module")
+@pytest.fixture(scope='module')
 def rendering_env():
     e = Environment(
         publicRoot='/pack',
@@ -61,7 +62,7 @@ def rendering_env():
 def test_js_renderer(rendering_env):
     foo = rendering_env.identify_assetspec('foo.js')
     assert foo
-    assert "script" in rendering_env.render_asset(foo)
+    assert 'script' in rendering_env.render_asset(foo)
 
 
 def test_add_renderer(rendering_env):

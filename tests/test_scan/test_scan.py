@@ -65,7 +65,6 @@ def test_build_output():
         templates=['template*/*.jinja2'])
     assert len(assets) >= 3
 
-
     with tempfile.TemporaryFile('w+') as fp:
         build_output(
             reference_root=HERE,
@@ -79,7 +78,8 @@ def test_build_output():
 
 def test_main_file():
     try:
-        with tempfile.NamedTemporaryFile(delete=False, dir=HERE) as fp:
+        with tempfile.NamedTemporaryFile(
+                delete=False, dir=HERE) as fp:
             name = fp.name
 
         main([
@@ -95,7 +95,6 @@ def test_main_file():
         os.unlink(name)
 
     assert 'require("./templates2/test.png")' in data
-
 
 
 def test_main_stdout(capsys):
