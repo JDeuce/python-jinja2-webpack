@@ -51,6 +51,7 @@ def create_environment(root, directory_globs):
         logging.debug('Directory glob %s: %s', pattern, result)
         directories += result
     env = Environment(loader=FileSystemLoader(directories))
+    logging.info('Using directories: %s', directories)
     return env
 
 
@@ -61,13 +62,14 @@ def find_resources(root, reference_root, env, template_globs):
         relative_result = [os.path.relpath(t, root) for t in result]
         logging.debug('Template glob %s: %s', pattern, relative_result)
         templates += relative_result
+    logging.info('Using templates: %s', templates)
 
     finder = WebpackReferenceFinder(reference_root)
     for template in templates:
         finder.directory = os.path.join(root, os.path.dirname(template))
         finder.template = template
-        logging.debug('Parsing %s using d=%r and t=%r', template,
-                      finder.directory, finder.template)
+        logging.info('Processing %s in directory %s',
+                     template, finder.directory)
         template_source = env.loader.get_source(env, template)[0]
         try:
             parsed_content = env.parse(template_source)
@@ -88,8 +90,8 @@ def build_output(reference_root, assets, outfile):
         # won't exist as files on disk
         refpath = os.path.join(reference_root, path)
         exists = os.path.exists(refpath)
-        logging.debug('Building output for %s (%s): %s', path, refpath,
-                      exists and 'require' or 'skip')
+        logging.info('Building output for %s (%s): %s', path, refpath,
+                     exists and 'require' or 'skip')
 
         if exists:
             print('require("%s");' % path, file=outfile)
