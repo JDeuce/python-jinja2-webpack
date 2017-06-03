@@ -67,7 +67,9 @@ def find_resources(root, reference_root, env, template_globs):
     finder = WebpackReferenceFinder(reference_root)
     for template in templates:
         finder.directory = os.path.join(root, os.path.dirname(template))
-        finder.template = template
+        # jinja2 assumes all templates are referenced with /
+        # despite the underlying OS, see jinja2.loaders.split_template_path
+        finder.template = '/'.join(os.path.split(template))
         logging.info('Processing %s in directory %s',
                      template, finder.directory)
         template_source = env.loader.get_source(env, template)[0]
