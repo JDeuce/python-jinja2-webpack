@@ -65,9 +65,14 @@ class Environment(object):
             self._manifest = {}
 
     def _resolve_asset(self, asset):
+        if not self.settings.publicRoot:
+            url=asset
+        else:
+            url='%s/%s' % (self.settings.publicRoot, asset)
+
         return Asset(
             filename=asset,
-            url='%s/%s' % (self.settings.publicRoot, asset))
+            url=url)
 
     def _resolve_manifest(self, manifest):
         result = {}
