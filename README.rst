@@ -20,7 +20,7 @@ Overview
     :target: http://jinja2-webpack.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
 
-.. |travis| image:: https://travis-ci.org/JDeuce/jinja2-webpack.svg?branch=master
+.. |travis| image:: https://travis-ci.org/JDeuce/python-jinja2-webpack.svg?branch=master
     :alt: Travis-CI Build Status
     :target: https://travis-ci.org/JDeuce/python-jinja2-webpack
 
