@@ -19,7 +19,7 @@ def read(*names, **kwargs):
 
 setup(
     name='jinja2-webpack',
-    version='0.1.4',
+    version='0.2.0',
     license='BSD',
     description='Integration of webpack with jinja2',
     long_description='%s\n%s' % (
