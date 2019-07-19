@@ -45,6 +45,18 @@ def test_renderer(env):
     assert env.render_asset(a) == '/pack/b'
 
 
+def test_root_renderer():
+    env = Environment(publicRoot='', manifest={'a': 'b'})
+    a = env.identify_assetspec('a')
+    assert env.render_asset(a) == 'b'
+
+
+def test_slash_renderer():
+    env = Environment(publicRoot='/', manifest={'a': 'b'})
+    a = env.identify_assetspec('a')
+    assert env.render_asset(a) == '/b'
+
+
 @pytest.fixture(scope='module')
 def rendering_env():
     e = Environment(
