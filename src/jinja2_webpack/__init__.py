@@ -67,6 +67,8 @@ class Environment(object):
     def _resolve_asset(self, asset):
         if not self.settings.publicRoot:
             url = asset
+        elif self.settings.publicRoot.endswith('/'):
+            url = self.settings.publicRoot + asset
         else:
             url = '%s/%s' % (self.settings.publicRoot, asset)
 
