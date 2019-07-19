@@ -49,13 +49,13 @@ class Environment(object):
     """ The webpack environment class. Loads the manifest and allows
     it to be accessed.
     Settings:
-        * manifest - default "webpack-manifest.json"
-            Path to the WebpackManifest file
-        * errorOnInvalidReference - default True
-            True if exception should be thrown when you try to resolve an
-            invalid asset reference
-        * publicRoot - default /static/pack
-            The public path to prepend to all asset URLs
+    * **manifest** - default ``webpack-manifest.json``.
+    Path to the WebpackManifest file.
+    * **errorOnInvalidReference** - default ``True``.
+    True if exception should be thrown when you try to resolve an invalid
+    asset reference.
+    * **publicRoot** - default ``/static/pack``.
+    The public path to prepend to all asset URLs.
     """
     def __init__(self, **kwargs):
         self.settings = EnvironmentSettings(**kwargs)
