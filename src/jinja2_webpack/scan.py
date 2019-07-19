@@ -75,7 +75,7 @@ def find_resources(root, reference_root, env, template_globs):
         template_source = env.loader.get_source(env, template)[0]
         try:
             parsed_content = env.parse(template_source)
-        except:
+        except:  # noqa: E722
             logging.exception('Error with template %s', template)
             raise
         finder.visit(parsed_content)
