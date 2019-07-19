@@ -5,7 +5,6 @@ from jinja2_webpack import AssetNotFoundException, Environment
 
 @pytest.fixture(scope='module')
 def env():
-
     e = Environment(
         publicRoot='/pack',
         manifest={
